@@ -1,0 +1,90 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Caboose",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#builtins"
+		},
+		{
+			"include": "#names"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.cb",
+					"match": "\\b(if|while|for|return|else)\\b"
+				},
+				{
+					"name": "constant.language.cb",
+					"match": "\\b(true|false|nil)\\b"
+				},
+				{
+					"name": "keyword.cb",
+					"match": "\\b(fun|var|class|static)\\b"
+				},
+				{
+					"name": "keyword.operator.cb",
+					"match": "\\b(and|or)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.cb",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cb",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"name":"constant.numeric.cb",
+			"match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+		},
+		"operators": {
+			"name": "keyword.operator.cb",
+			"match": "((==|!=|<=|>=|\\*=|\\/=|\\+=|-=)|[*/!\\-+<>=])"
+		},
+		"builtins": {
+			"name": "support.function.cb",
+			"match": "\\b(exit|print|str|bool|clock|time|len)\\b"
+		},
+		"names": {
+			"patterns": [
+				{
+					"name": "entity.name.cb",
+					"match": "\\b(?<=var )([[:alpha:]][[:alnum:]]*)\\b"
+				},
+				{
+					"name": "entity.name.function.cb",
+					"match": "\\b(?<=fun )([[:alpha:]][[:alnum:]]*)\\b"
+				}
+			]
+		},
+		"arguments": {
+			"patterns": [
+				{
+					"name": "variable.parameter.cb",
+					"match": "(?<=\\()\\s*([[:alpha:]][[:alnum:]]*)(?:\\s*,\\s*([[:alpha:]][[:alnum:]]*))*\\s*(?=\\))"
+				}
+			]
+		}
+	},
+	"scopeName": "source.caboose"
+}
