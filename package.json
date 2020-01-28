@@ -3,7 +3,7 @@
     "displayName": "Caboose",
     "publisher": "CabooseLang",
     "description": "Caboose language support for VS Code",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "engines": {
         "vscode": "^1.41.0"
     },
