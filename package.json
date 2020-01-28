@@ -1,7 +1,7 @@
 {
     "name": "caboose",
     "displayName": "Caboose",
-    "publisher": "RailRunner16",
+    "publisher": "CabooseLang",
     "description": "Caboose language support for VS Code",
     "version": "1.0.0",
     "engines": {
@@ -10,6 +10,10 @@
     "categories": [
         "Programming Languages"
     ],
+    "repository": {
+        "url": "https://github.com/CabooseLang/vscode-caboose.git",
+        "type": "git"
+    },
     "contributes": {
         "languages": [
             {
